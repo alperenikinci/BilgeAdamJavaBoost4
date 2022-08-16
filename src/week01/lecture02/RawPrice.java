@@ -22,7 +22,7 @@ public class RawPrice {
 		System.out.print("Please enter profit rate: ");
 		c= scan.nextFloat();
 		
-		float FinalPrice = a;
+
 		float NoVATPrice = (a*100)/(100+b);
 		float rawPrice = (NoVATPrice*100)/(100+c);
 		

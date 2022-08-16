@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class ThreeVariables {
 
+	private static Scanner scan;
+
 	public static void main(String[] args)
 	
 	{
 		int a,b,c;
 		
-		Scanner scan = new Scanner (System.in);
+		scan = new Scanner (System.in);
 		System.out.print("Please enter first number: ");
 		a = scan.nextInt();
 		
