@@ -27,7 +27,5 @@ public static void main(String[] args)
 		
 	System.out.println("Your number +1 is: "+ ++a);
 	}
-
-	
 }
 
