@@ -1,11 +1,14 @@
 package week01.lecture02;
 
 import java.util.Scanner;
-
+//Execution time is experimented in this drill.
 public class RawPrice {
 
 	public static void main(String[] args) 
 	{
+		
+		long startTime = System.nanoTime();
+		
 		float a;
 		float b;
 		float c;
@@ -25,8 +28,10 @@ public class RawPrice {
 		
 		System.out.println("Final Price: "+ a +"\n"+ "NoVATprice: "+ NoVATPrice+ "\n"+"RawPrice: "+ rawPrice);
 		
-		
-
+		long endTime = System.nanoTime();
+		long timeElapsed = endTime - startTime;
+		System.out.println("Execution time in nanoseconds: " + timeElapsed);
+		System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
 	}
 
 }
