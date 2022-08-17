@@ -1,4 +1,4 @@
-package week01.lecture02;
+package com.bilgeadam.boost.week01.lecture02;
 
 import java.util.Scanner;
 
@@ -26,6 +26,6 @@ public static void main(String[] args)
 	a = scan.nextInt();
 		
 	System.out.println("Your number +1 is: "+ ++a);
+	scan.close();
 	}
 }
-

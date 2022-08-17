@@ -1,4 +1,4 @@
-package week01.lecture02;
+package com.bilgeadam.boost.week01.lecture02;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class FahrenheitToCelcius
 		
 		int conversion = (int) ((a-32)/1.8);
 		System.out.println(a + " Fahrenheit is approximately: "+ conversion + " Celcius degrees");
-
+		scan.close();
 	}
 
 }

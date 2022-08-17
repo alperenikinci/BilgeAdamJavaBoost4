@@ -1,4 +1,4 @@
-package week01.lecture02;
+package com.bilgeadam.boost.week01.lecture02;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class ModAndDivision {
 		double mod = a%b;
 			
 		System.out.println("Result is; "+ div +"\n" + "Remainder is: "+ mod);
-		
+		scan.close();
 
 	}
 	
