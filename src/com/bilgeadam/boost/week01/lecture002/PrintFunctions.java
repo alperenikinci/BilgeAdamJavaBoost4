@@ -1,4 +1,4 @@
-package com.bilgeadam.boost.week01.lecture02;
+package com.bilgeadam.boost.week01.lecture002;
 
 import javax.swing.JOptionPane;
 

@@ -1,4 +1,4 @@
-package com.bilgeadam.boost.week01.lecture01;
+package com.bilgeadam.boost.week01.lecture001;
 
 public class Deneme {
 

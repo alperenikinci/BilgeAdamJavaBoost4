@@ -1,22 +1,22 @@
-package com.bilgeadam.boost.week01.lecture02;
+package com.bilgeadam.boost.week01.lecture002;
 
 import java.util.Scanner;
 
 
 //Execution time is experimented in this drill.
-public class RawPrice {
-
+public class HMW_RawPriceCalculation 
+{
 	public static void main(String[] args) 
 	{
-		
 		long startTime = System.nanoTime();
 		
-		float a;
-		float b;
-		float c;
+		float a, b, c;
+	
 		Scanner scan = new Scanner (System.in);
+	
 		System.out.print("Please enter final price: ");
 		a = scan.nextFloat();
+		
 		System.out.print("Please enter VAT rate: ");
 		b = scan.nextFloat();
 		
@@ -30,10 +30,9 @@ public class RawPrice {
 		
 		long endTime = System.nanoTime();
 		long timeElapsed = endTime - startTime;
-		System.out.println("Execution time in nanoseconds: " + timeElapsed);
+		System.out.println("\nExecution time in nanoseconds: " + timeElapsed);
 		System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
 		scan.close();
-		
 	}
 
 }
