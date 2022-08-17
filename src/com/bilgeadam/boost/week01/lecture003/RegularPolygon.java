@@ -21,6 +21,8 @@ public class RegularPolygon {
 		System.out.print("Please enter length of a side: ");
 		s = scan.nextDouble();
 		
+		scan.close();
+		
 		area = (n*(Math.pow(s, 2)))/(4*(Math.tan(PI/n)));
 		System.out.println(n+" sided polygons area is: "+area);
 	}

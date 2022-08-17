@@ -12,21 +12,22 @@ public class IfElse {
 		System.out.print("Please enter a number: ");
 		x = scan.nextInt();
 		
+		scan.close();
+		
 		if (x<0) 
-		{
-		System.out.println("X is negative");
-		}
+			{
+			System.out.println("X is negative");
+			}
 		
-		else if (x==0)
-		{
-			System.out.println("X is neutral");
-		}
+			else if (x==0)
+				{
+				System.out.println("X is neutral");
+				}
 		
-		else 
-		{
-			System.out.println("X is positive");
-		}
-		
+			else 
+				{
+				System.out.println("X is positive");
+				}
 	}
 }
 				
