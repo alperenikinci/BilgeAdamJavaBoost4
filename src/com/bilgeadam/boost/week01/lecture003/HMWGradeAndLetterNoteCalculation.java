@@ -16,7 +16,7 @@ public class HMWGradeAndLetterNoteCalculation
 			
 			System.out.print("Please enter your first midterm weight: ");
 			m1w = scan.nextDouble();
-		
+	
 			System.out.print("Please enter your second midterm score: ");
 			m2 = scan.nextDouble();
 		

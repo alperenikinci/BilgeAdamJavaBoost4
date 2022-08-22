@@ -20,56 +20,56 @@ public class HMWBodyMassIndex
 			System.out.print("Please enter your weight in kilograms: ");
 			weight = scan.nextDouble();
 			
-			System.out.print("Please enter your gender: ");
+			System.out.print("Please enter your gender in form of: \"Male\" or \"M\" \"Female\" or \"F\": ");
 			gender = scan.next();
 			
 			bmi = weight * 10000 / (Math.pow(height, 2));
 		
 		scan.close();
 				
-		if (gender.equals("Male") || gender.equals("M") && bmi < 20)
+		if (gender.equalsIgnoreCase("Male") || gender.equalsIgnoreCase("M") && bmi < 20)
 		{	
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Underweight");
 		}
 				
-		else if (gender.equals("Male") || gender.equals("M") && bmi < 26)
+		else if (gender.equalsIgnoreCase("Male") || gender.equalsIgnoreCase("M") && bmi < 26)
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Normal weight");
 		}
 			
-		else if (gender.equals("Male") || gender.equals("M") && bmi < 30)
+		else if (gender.equalsIgnoreCase("Male") || gender.equalsIgnoreCase("M") && bmi < 30)
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Overweight");
 		}
 			
-		else if (gender.equals("Male") || gender.equals("M")) 
+		else if (gender.equalsIgnoreCase("Male") || gender.equalsIgnoreCase("M")) 
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Obese");
 		}
 	
-		else if (gender.equals("Female") || gender.equals("F") && bmi < 19 )
+		else if (gender.equalsIgnoreCase("Female") || gender.equalsIgnoreCase("F") && bmi < 19 )
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Underweight");
 		}
 			
-		else if (gender.equals("Female")|| gender.equals("F") && bmi < 25)
+		else if (gender.equalsIgnoreCase("Female")|| gender.equalsIgnoreCase("F") && bmi < 25)
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Normal weight");
 		}
 			
-		else if (gender.equals("Female")|| gender.equals("F") && bmi < 30)
+		else if (gender.equalsIgnoreCase("Female")|| gender.equalsIgnoreCase("F") && bmi < 30)
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Overweight");
 		}
 			
-		else if (gender.equals("Female")|| gender.equals("F") && bmi > 30)
+		else if (gender.equalsIgnoreCase("Female")|| gender.equalsIgnoreCase("F") && bmi > 30)
 		{
 			System.out.println("\nYour BMI is: "+ bmi+"\nYou are considered: Obese");
 		}
 			
 		else 
 		{
-			System.err.println("ERROR! \n" + "To enter your gender you must use; \n" + "\"Male\" or \"M\" for male. \n"+"\"Female\" or \"F\" for female.");
+			System.err.println("\nERROR! \n" + "To enter your gender you must use; \n" + "\"Male\" or \"M\" for male. \n"+"\"Female\" or \"F\" for female.");
 			System.err.println("Please restart the program and try again!");
 			JOptionPane.showMessageDialog(null,"Oops! Something went wrong.","System Error",JOptionPane.ERROR_MESSAGE);
 		}		
