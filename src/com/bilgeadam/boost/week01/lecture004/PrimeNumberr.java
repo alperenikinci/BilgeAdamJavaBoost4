@@ -1,49 +1,55 @@
 package com.bilgeadam.boost.week01.lecture004;
-
 import java.util.Scanner;
 
 public class PrimeNumberr 
 {
-	//TODO Fix it
 	public static void main(String[] args) 
 	{
-		int n;
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Please enter a number: ");
-		n = scan.nextInt();
-		scan.close();
-		int i = 2;
-		int root = (int) Math.sqrt(n);
-		
-		if (n <= 1)
-			System.out.println(n+ " is not a prime number");
-		
-		else if (n == 2) 
-			
-			System.out.println(n+ " is a prime number");
-		
-		else if (n%2 == 0) 
-			System.out.println(n+ " is not a prime number");
-		
-		else
-		{
-			while (i < root);
-			{	i++;
-				if (n%i == 0) 
-				{
-					System.out.println(n+ " is not a prime number.");
-					
-				}
-				else 
-				{	
-					System.out.println(n+ " is a prime number.");	
-				}
-				
-			}
-		}
-	
-	}
-}
+	Boolean prime = true;
+	long n;
+	Scanner scan = new Scanner (System.in);
+	System.out.print("Please enter a number:");
+	n = scan.nextLong();
+	scan.close();
+	long startTime = System.nanoTime();
+	int sqrt = (int) Math.sqrt(n);
+	int i = 3;
 
+	if (n==2 || n==3) 
+	{
+		System.out.println(n+ " is a prime number");
+	}
+	else if (n<=1 || n%2==0) 
+	{
+		System.out.println(n+ " is not a prime number");
+	}
+	else 
+	{
+	for (;i<=sqrt;i=i+2) 
+	{
+		if (n%i==0) 
+		{
+			prime = false;
+			break;
+		}
+	}
+	
+	if (prime) 
+	{
+		System.out.println(n+ " is  a prime number");
+	}
+	else
+	{
+		System.out.println(n+ " is not a prime number");
+	}
+	}
+	long endTime = System.nanoTime();
+	long timeElapsed = endTime - startTime;
+	
+	System.out.println("Execution time in nanoseconds: " + timeElapsed);
+    System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
+
+}
+}
 
 	
