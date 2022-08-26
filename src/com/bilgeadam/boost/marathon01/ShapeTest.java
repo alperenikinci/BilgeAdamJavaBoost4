@@ -38,15 +38,20 @@ public class ShapeTest {
 				{
 					double selection;
 					System.out.print("Please enter the length number "+i +" (0 to end) : " );
-					input = new Scanner(System.in);
-					selection = input.nextDouble();
+					input = new Scanner(System.in);	
+					if (!input.hasNextDouble()) 
+					{	
+						System.err.println("Please enter a number!!!");
+						continue;
+					}
+					
+					selection = input.nextDouble();	
 					
 					if (selection == 0 && i<=3 && sides.getSide1()==0) 
 						{
 						System.err.println("\nGeometric shapes require at least 3 side input!!!\n");
 						continue;
 						}
-					
 					
 					if (selection == 0 && i==4 ) 
 						{
@@ -66,7 +71,6 @@ public class ShapeTest {
 						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a square after all -_- \n");
 						break;
 						}
-						
 					if (selection == -1) 
 						{
 						exit = false;
