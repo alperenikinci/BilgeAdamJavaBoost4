@@ -66,16 +66,6 @@ public class ShapeTest {
 						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a square after all -_- \n");
 						break;
 						}
-					
-					if (sides.getSide1() == sides.getSide2() && selection == 0)
-						{
-						System.out.println("\nOh! You are looking for a square!\nHere you go pal!");
-						double diameter = calculateDiameter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
-						System.out.println("\nDiameter of the shape "+shapeNo+" is : "+diameter);
-						String area = calculateArea("");
-						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a square after all -_- \n");
-						break;
-						}	
 						
 					if (selection == -1) 
 						{
