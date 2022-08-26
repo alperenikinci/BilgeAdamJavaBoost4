@@ -1,4 +1,4 @@
-package com.bilgeadam.boost.week02.Marathon1;
+package com.bilgeadam.boost.marathon01;
 
 import java.util.Scanner;
 
