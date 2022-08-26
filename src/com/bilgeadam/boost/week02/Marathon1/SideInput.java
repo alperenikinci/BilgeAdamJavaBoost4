@@ -1,4 +1,4 @@
-package com.bilgeadam.boost.week02.Marathon;
+package com.bilgeadam.boost.week02.Marathon1;
 
 public class SideInput 
 {
@@ -6,14 +6,8 @@ public class SideInput
 	private double side2;
 	private double side3;
 	private double side4;
-	private double exit;
 	
-	public double getExit() {
-		return exit;
-	}
-	public void setExit(double exit) {
-		this.exit = exit;
-	}
+
 	public double getSide1() {
 		return side1;
 	}
