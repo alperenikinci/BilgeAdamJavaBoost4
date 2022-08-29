@@ -21,13 +21,13 @@ public class ShapeTest {
 		Scanner input;
 		SideInput sides = new SideInput();
 		
-		int shapeNo =0;
+		int shapeNo =1;
 		boolean exit = true;
 		
 		while(exit)
 		{
 			int i = 1;
-			shapeNo++;
+			
 			sides.setSide1(0);
 			sides.setSide2(0);
 			sides.setSide3(0);
@@ -41,36 +41,39 @@ public class ShapeTest {
 					input = new Scanner(System.in);	
 					if (!input.hasNextDouble()) 
 					{	
-						System.err.println("Please enter a number!!!");
+						System.err.println("\nPlease enter a number!!!");
 						continue;
 					}
 					
 					selection = input.nextDouble();	
 					
-					if (selection == 0 && i<=3 && sides.getSide1()==0) 
+					if (sides.getSide1()!=0 && sides.getSide1() == sides.getSide2() && selection == 0 && sides.getSide3()==0)
 						{
-						System.err.println("\nGeometric shapes require at least 3 side input!!!\n");
-						continue;
+						System.out.println("\nOh! You are looking for a square!\nHere you go pal!");
+						double perimeter = calculatePerimeter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
+						System.out.println("\nPerimeter of the shape "+shapeNo+" is : "+perimeter);
+						String area = calculateArea("");
+						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a square after all -_- \n");
+						shapeNo++;
+						break;
+						}
+					
+					if (selection == 0 && i<=3) 
+						{
+						System.err.println("\nGeometric shapes require at least 3 side input!!!");
+						break;
 						}
 					
 					if (selection == 0 && i==4 ) 
 						{
-						double diameter = calculateDiameter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
-						System.out.println("\nDiameter of the shape "+shapeNo+" is : "+diameter);
+						double perimeter = calculatePerimeter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
+						System.out.println("\nPerimeter of the shape "+shapeNo+" is : "+perimeter);
 						String area = calculateArea("");
 						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a triangle after all -_- \n");
+						shapeNo++;
 						break;
-						}
-						
-					if (sides.getSide1() == sides.getSide2() && selection == 0)
-						{
-						System.out.println("\nOh! You are looking for a square!\nHere you go pal!");
-						double diameter = calculateDiameter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
-						System.out.println("\nDiameter of the shape "+shapeNo+" is : "+diameter);
-						String area = calculateArea("");
-						System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a square after all -_- \n");
-						break;
-						}
+						}	
+					
 					if (selection == -1) 
 						{
 						exit = false;
@@ -106,11 +109,13 @@ public class ShapeTest {
 						case 4:
 							{
 							sides.setSide4(selection);
-							double diameter = calculateDiameter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
-							System.out.println("\nDiameter of the shape "+shapeNo+" is : "+diameter);
+							double perimeter = calculatePerimeter(sides.getSide1(),sides.getSide2(), sides.getSide3(), sides.getSide4());
+							System.out.println("\nPerimeter of the shape "+shapeNo+" is : "+perimeter);
 							String area = calculateArea("");
 							System.out.println("Area of the shape "+shapeNo+ " is : "+ area+" It is a rectangle after all -_- \n");
+							shapeNo++;
 							break;
+							
 							}
 					}
 						i++;
@@ -127,12 +132,13 @@ public class ShapeTest {
 		return area;
 	}
 
-	private double calculateDiameter(double a , double b , double c, double d) 
+	private double calculatePerimeter(double a , double b , double c, double d) 
 	{
-		double diameter = a+b+c+d;
-		return diameter;
+		double perimeter = a+b+c+d;
+		return perimeter;
 	}
 
 	
 	}
+
 
