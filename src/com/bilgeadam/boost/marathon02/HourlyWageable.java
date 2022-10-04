@@ -1,6 +1,5 @@
 package com.bilgeadam.boost.marathon02;
 
-public interface HourlyWageable 
-{
+public interface HourlyWageable {
 	double calculateMonthlySalary();
 }

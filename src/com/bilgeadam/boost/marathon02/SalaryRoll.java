@@ -9,8 +9,7 @@ public class SalaryRoll {
 	static Scanner input = new Scanner(System.in);
 	static int counter = 0;
 
-	public void execute() 
-	{
+	public void execute() {
 		generateEmployees();
 		menu();
 	}
@@ -74,6 +73,7 @@ public class SalaryRoll {
 		System.out.println("\n-----------------------------------------------------------------");
 		System.out.println("Employees who were active during the time period of : " + date);
 		System.out.println("-----------------------------------------------------------------");
+
 		Employee.employeeList.stream()
 				.filter(employee -> employee.getStartingDateOfEmployee().isBefore(date)
 						&& employee.getEmploymentEndDate().isAfter(date))

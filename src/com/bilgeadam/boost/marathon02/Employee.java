@@ -38,10 +38,10 @@ public abstract class Employee
 
 	public String generateRegistrationId()
 	{	String tempId = null;
-		
-		if(employeeCount<1000) 
+		tempId = String.format("%04d", ++employeeCount);
+		if(employeeCount==9999) 
 		{	
-			tempId = String.format("%04d", ++employeeCount);
+			employeeCount=0;
 		}
 		return tempId;
 	}
@@ -113,6 +113,4 @@ public abstract class Employee
 		this.startingDateOfEmployee = startingDateOfEmployee;
 	}
 
-
-	
 }
