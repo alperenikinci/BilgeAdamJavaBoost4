@@ -8,9 +8,10 @@ public class SieveOfEratosthenes
 {	
 
 	public static void main(String[] args) 
-	{	SieveOfEratosthenes sieveOfEratosthenes = new SieveOfEratosthenes();
+	{	
+		SieveOfEratosthenes sieveOfEratosthenes = new SieveOfEratosthenes();
 		sieveOfEratosthenes.sieve();
-		}	
+	}	
 	
 
 	private void sieve() 

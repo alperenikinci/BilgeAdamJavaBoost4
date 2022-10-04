@@ -13,7 +13,7 @@ public class PrimeNumberr
 	scan.close();
 	long startTime = System.nanoTime();
 	int sqrt = (int) Math.sqrt(n);
-	int i = 3;
+	long i = 3;
 
 	if (n==2 || n==3) 
 	{

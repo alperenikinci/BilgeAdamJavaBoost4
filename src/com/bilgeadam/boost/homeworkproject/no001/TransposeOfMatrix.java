@@ -7,10 +7,10 @@ public class TransposeOfMatrix {
 	public static void main(String[] args) 
 	{	
 		TransposeOfMatrix transposeMatrix = new TransposeOfMatrix();
-		transposeMatrix.welcome();
+		transposeMatrix.execute();
 	}
 
-	private void welcome() 
+	private void execute() 
 	{	
 		System.out.println("Welcome to the matrix transposer!!!\n");
 		
@@ -51,7 +51,7 @@ public class TransposeOfMatrix {
 			break;	
 		}
 		int[][] matrix = new int[rows][columns];
-		int[][] transpose = new int [rows][columns];
+		int[][] transpose = new int [columns][rows];
 		while(true)
 		{	Scanner input = new Scanner (System.in);
 			System.out.println("Please enter the rows of the Matrix : ");
@@ -74,14 +74,14 @@ public class TransposeOfMatrix {
 		System.out.println("\nYour matrix is : \n");
 		for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++)
-                System.out.print(matrix[i][j] + "  ");
+                System.out.print(matrix[i][j] + " 	 ");
             System.out.println();
 		}
 		
 		System.out.println("\nTranspose of your matrix is : ");
-		for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++)
-                System.out.print(transpose[i][j] + "  ");
+		for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < rows; j++)
+                System.out.print(transpose[i][j] + " 	 ");
             System.out.println();
 		}
 		
