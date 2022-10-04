@@ -11,9 +11,9 @@ public class MonthlyWageEarningEmployee extends Employee implements MonthlyWagea
 
 	private int monthlySalaryGenerator() {
 		Random random = new Random();
-		int hourlyWageLowerBound = 5000;
-		int hourlyWageUpperBound = 15000;
-		int monthlySalary = random.nextInt(hourlyWageLowerBound, hourlyWageUpperBound);
+		int monthlyWageLowerBound = 5000;
+		int monthlyWageUpperBound = 15000;
+		int monthlySalary = random.nextInt(monthlyWageLowerBound, monthlyWageUpperBound);
 		return monthlySalary;
 	}
 
