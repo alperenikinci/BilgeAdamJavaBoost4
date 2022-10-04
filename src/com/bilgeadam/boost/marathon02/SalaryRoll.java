@@ -9,7 +9,8 @@ public class SalaryRoll {
 	static Scanner input = new Scanner(System.in);
 	static int counter = 0;
 
-	public void execute() {
+	public void execute() 
+	{
 		generateEmployees();
 		menu();
 	}
